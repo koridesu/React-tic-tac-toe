@@ -1,11 +1,11 @@
 import React from 'react';
 
-function Square(props:any) {
-      return (
-            <button onClick={props.onClick()}>
-                  {props.value}
-            </button>
-      );
+function Square(props: any) {
+  return (
+    <button className='btn' onClick={() => props.clickHandler(props.index)}>
+      {props.value}
+    </button>
+  );
 }
 
 export default Square;
