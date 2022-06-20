@@ -84,9 +84,19 @@ function Game() {
       return;
     }
 
-    let temp = [...squares];
-    temp[index] = turn ? 'X' : 'O';
-    setSquares(temp);
+    setSquares((prev) => {
+      return [
+        ...prev.slice(0, index),
+        turn ? 'X' : 'O',
+        ...prev.slice(index + 1, prev.length),
+      ];
+    });
+    //     setSquares(() => {
+    //       let temp = [...squares];
+    //       temp[index] = turn ? 'X' : 'O';
+    //       return temp;
+    //     });
+
     setTurn(!turn);
   };
 
