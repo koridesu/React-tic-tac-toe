@@ -9,6 +9,7 @@ body {
   justify-content: center;
   text-align: center;
   background-color: #32a4a8;
+  overflow: hidden;
 }
 
 .btn {
@@ -44,8 +45,7 @@ body {
 }
 
 .game {
-  display: flex;
-  flex-wrap: wrap;
+
 }
 
 .row {
@@ -58,8 +58,10 @@ body {
 .game-info {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
     'Lucida Sans', Arial, sans-serif;
-  margin-left: 20px;
-  width: 200px;
+  display: flex;
+
+  justify-content: center;
+
 }
 
 .game-info button {
@@ -71,6 +73,7 @@ body {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
     'Lucida Sans', Arial, sans-serif;
   cursor: pointer;
+  margin-top: 10px;
 }
 
 .game-info button:hover {
