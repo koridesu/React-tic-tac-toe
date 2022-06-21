@@ -2,7 +2,7 @@ import React from 'react';
 
 function Square(props: any) {
   return (
-    <button className='btn' onClick={() => props.clickHandler(props.index)}>
+    <button className={props.style} onClick={() => props.clickHandler(props.index)}>
       {props.value}
     </button>
   );

@@ -44,9 +44,6 @@ body {
   box-shadow: 0 4px rgba(255, 255, 0, 0.786), 0 10px rgba(0, 0, 0, 0.5);
 }
 
-.game {
-
-}
 
 .row {
   background-color: #282c34;
@@ -86,4 +83,24 @@ body {
 
 .game-info p {
   font-size: 30px;
+}
+
+.lock-buttons {
+  cursor: default;
+  background-color: red;
+  pointer-events: none;
+  font-family: 'Montreserrat';
+  font-size: 40px;
+  color: rgb(194, 151, 78);
+  background-color: #addadb;
+  border: 2px solid #addadb;
+  border-radius: 3px;
+  box-shadow: 0 12px yellow, 0 18px rgba(0, 0, 0, 0.5);
+  position: relative;
+  top: 0;
+  width: 90px;
+  height: 80px;
+  margin: 15px;
+  padding: 5px;
+  vertical-align: top;
 }

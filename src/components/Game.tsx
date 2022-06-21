@@ -72,12 +72,20 @@ function Game() {
 
   const [status, setStatus] = useState<string>('');
 
+  const [style, setStyle] = useState('btn');
+
   useEffect(() => {
     let winner = calculateWinner();
 
     if (winner && winner !== 'Draw') setStatus('Winner is:' + winner);
     else setStatus(winner);
+    console.log(winner);
+    
+    if(winner !== null){
+      setStyle('lock-buttons')
+    }
   }, [squares]);
+
 
   const clickHandler = (index: number) => {
     if (squares[index] || status !== null) {
@@ -132,12 +140,13 @@ function Game() {
     setSquares(Array(9).fill(null));
     setStatus('');
     setTurn(true);
+    setStyle("btn");
   };
 
   return (
     <div className='game'>
       <div className='game-board'>
-        <Board squares={squares} clickHandler={clickHandler}></Board>
+        <Board squares={squares} clickHandler={clickHandler} style = {style}></Board>
       </div>
       <div className='game-info'>
         <div>
