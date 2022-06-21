@@ -80,7 +80,7 @@ function Game() {
   }, [squares]);
 
   const clickHandler = (index: number) => {
-    if (squares[index]) {
+    if (squares[index] || status !== null) {
       return;
     }
 
